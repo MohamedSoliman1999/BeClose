@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:id="@+id/bottomSheetContainer">
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/f_show_profile_image_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:enabled="true"
+            android:fontFamily="@font/segoeui_font"
+            android:text="View Profile Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_filled_profile"
+            app:iconGravity="textStart"
+            app:iconPadding="20dp"
+            app:iconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/f_account_change_profile_image_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:enabled="true"
+            android:fontFamily="@font/segoeui_font"
+            android:text="Select Profile Picture"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_image"
+            app:iconSize="24dp"
+            app:iconGravity="textStart"
+            app:iconPadding="20dp"
+            app:iconTint="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/button2"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            app:cardCornerRadius="10dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            app:cardBackgroundColor="@color/green"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:clickable="true"-->
+<!--            app:layout_constraintStart_toStartOf="parent" >-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/addToCard"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Add To Card"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:gravity="center"-->
+<!--                android:clickable="true"-->
+<!--                android:textSize="18sp"/>-->
+<!--        </androidx.cardview.widget.CardView>-->
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/button32"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:cardCornerRadius="10dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            app:cardBackgroundColor="@color/orange"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+
+<!--            android:clickable="true"-->
+<!--            app:layout_constraintStart_toStartOf="parent" >-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/OrderBottomSheet"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Ordder"-->
+<!--                android:textColor="#FFFFFF"-->
+<!--                android:gravity="center"-->
+<!--                android:clickable="true"-->
+<!--                android:textSize="18sp"/>-->
+<!--        </androidx.cardview.widget.CardView>-->
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

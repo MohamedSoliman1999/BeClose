@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.beclose.Forms.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_from_splash_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/app_nav_graph"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_from_splash_to_add_newField"
+            app:destination="@id/newFieldFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/app_nav_graph"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_from_splash_to_loginContainer"
+            app:destination="@id/LoginInContainerFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/app_nav_graph"
+            app:popUpToInclusive="false"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.beclose.Distenation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_from_home_settings_to_LoginContainer"
+            app:destination="@id/LoginInContainerFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/app_nav_graph"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_from_home_to_qr_managment"
+            app:destination="@id/QRManagmentFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_from_home_to_my_profile"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false"/>
+        <action
+            android:id="@+id/action_from_home_to_user_profile"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false">
+            <argument
+            android:name="userProfile"
+            app:argType="com.example.beclose.model.UserProfile"/>
+        </action>
+        <action
+            android:id="@+id/action_from_home_to_search_fragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="false">
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.beclose.Forms.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/LoginInContainerFragment"
+        android:name="com.example.beclose.Forms.LogInContainerFragment"
+        android:label="fragment_login_in_container"
+        tools:layout="@layout/fragment_log_in_container" >
+        <action
+            android:id="@+id/action_from_LoginContainer_to_walk_through"
+            app:destination="@id/walkThroughFragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/LoginInContainerFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/QRCodeFragment"
+        android:name="com.example.beclose.Distenation.QRCodeFragment"
+        android:label="fragment_q_r_code"
+        tools:layout="@layout/fragment_q_r_code" >
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.beclose.Forms.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/scanQRFragment"
+        android:name="com.example.beclose.Distenation.ScanQRFragment"
+        android:label="fragment_scan_q_r"
+        tools:layout="@layout/fragment_scan_q_r" />
+    <fragment
+        android:id="@+id/fullScreenImageragment"
+        android:name="com.example.beclose.Distenation.FullScreenImageragment"
+        android:label="fragment_full_screen_imageragment"
+        tools:layout="@layout/fragment_full_screen_imageragment">
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.example.beclose.Distenation.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.beclose.Distenation.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/connectionsFragment"
+        android:name="com.example.beclose.Distenation.ConnectionsFragment"
+        android:label="fragment_connections"
+        tools:layout="@layout/fragment_connections" />
+    <fragment
+        android:id="@+id/QRManagmentFragment"
+        android:name="com.example.beclose.Distenation.QRManagmentFragment"
+        android:label="fragment_q_r_managment"
+        tools:layout="@layout/fragment_q_r_managment" >
+        <action
+            android:id="@+id/action_from_qr_managment_to_fullScreen"
+            app:destination="@id/fullScreenImageragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/QRCodeFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="image"
+                app:argType="android.graphics.Bitmap" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.beclose.Distenation.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <argument
+            android:name="userProfile"
+            app:argType="com.example.beclose.model.UserProfile"/>
+        <action
+            android:id="@+id/action_from_profile_fragment_to_bottom_sheet"
+            app:destination="@id/bottomSheetFragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="image"
+                app:argType="android.graphics.Bitmap" />
+        </action>
+        <action
+            android:id="@+id/action_from_profile_to_fullScreen_profile"
+            app:destination="@id/fullScreenImageragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="image"
+                app:argType="android.graphics.Bitmap" />
+        </action>
+        <action
+            android:id="@+id/action_from_profile_to_add_new_field"
+            app:destination="@id/newFieldFragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="isFromProfile"
+                app:argType="integer"
+                android:defaultValue="-1"/>
+        </action>
+        <action
+            android:id="@+id/action_from_profile_to_add_new_field_to_update"
+            app:destination="@id/newFieldFragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="false">
+            <argument android:name="isUpdate"
+                app:argType="com.example.beclose.model.DataField"
+                app:nullable="true"
+                android:defaultValue="@null"/>
+        </action>
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.beclose.Adapter.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" >
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+        <action
+            android:id="@+id/action_from_profile_to_fullScreen_sheet"
+            app:destination="@id/fullScreenImageragment"
+            app:enterAnim="@anim/slide_from_bottom_to_up"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="image"
+                app:argType="android.graphics.Bitmap" />
+        </action>
+    </dialog>
+    <fragment
+        android:id="@+id/newFieldFragment"
+        android:name="com.example.beclose.Distenation.NewFieldFragment"
+        android:label="fragment_new_field"
+        tools:layout="@layout/fragment_new_field" >
+        <argument
+            android:name="isFromProfile"
+            app:argType="integer"
+            android:defaultValue="-1"/>
+        <argument android:name="isUpdate"
+            app:argType="com.example.beclose.model.DataField"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <action
+            android:id="@+id/action_from_add_newField_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/newFieldFragment"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
+    <fragment
+        android:id="@+id/walkThroughFragment"
+        android:name="com.example.beclose.Distenation.WalkThroughFragment"
+        android:label="fragment_walk_through"
+        tools:layout="@layout/fragment_walk_through" >
+        <action
+            android:id="@+id/action_from_walk_through_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/walkThroughFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_from_walk_through_to_add_newField"
+            app:destination="@id/newFieldFragment"
+            app:enterAnim="@anim/slide_from_out_right_to_center"
+            app:exitAnim="@anim/slide_from_center_to_out_left"
+            app:popUpTo="@id/walkThroughFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.beclose.Distenation.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search">
+    </fragment>
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.beclose.Distenation.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+</navigation>

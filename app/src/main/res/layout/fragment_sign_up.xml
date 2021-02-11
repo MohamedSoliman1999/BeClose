@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Forms.SignUpFragment">
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/f_registration_til_full_name"
+           style="@style/customOutLinedBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="18dp"
+           android:layout_marginEnd="25dp"
+           android:hint="Full Name"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/f_registration_tiet_full_name"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:maxLines="1"
+               android:textColor="@color/colorPlaceholderLightGrey" />
+       </com.google.android.material.textfield.TextInputLayout>
+       <!-- Email Input Field-->
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/f_registration_til_email_address"
+           style="@style/customOutLinedBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="18dp"
+           android:layout_marginEnd="25dp"
+           android:hint="Email"
+           app:layout_constraintTop_toBottomOf="@id/f_registration_til_full_name">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/f_registration_tiet_email_address"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:maxLines="1"
+               android:textColor="@color/colorPlaceholderLightGrey" />
+
+       </com.google.android.material.textfield.TextInputLayout>
+<!--       &lt;!&ndash; Phone Input Field&ndash;&gt;-->
+<!--       <com.google.android.material.textfield.TextInputLayout-->
+<!--           android:id="@+id/f_registration_til_phone"-->
+<!--           style="@style/customOutLinedBox"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="wrap_content"-->
+<!--           android:layout_marginStart="25dp"-->
+<!--           android:layout_marginTop="18dp"-->
+<!--           android:layout_marginEnd="25dp"-->
+<!--           android:hint="Phone"-->
+<!--           app:layout_constraintTop_toBottomOf="@id/f_registration_til_email_address">-->
+
+<!--           <com.google.android.material.textfield.TextInputEditText-->
+<!--               android:id="@+id/f_registration_tiet_phone"-->
+<!--               android:layout_width="match_parent"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:includeFontPadding="false"-->
+<!--               android:maxLines="1"-->
+<!--               android:inputType="phone"-->
+<!--               android:textColor="@color/colorPlaceholderLightGrey" />-->
+
+<!--       </com.google.android.material.textfield.TextInputLayout>-->
+       <!-- Password Input Field-->
+       <com.google.android.material.textfield.TextInputLayout
+           android:id="@+id/f_registration_til_password"
+           style="@style/customOutLinedBox"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="25dp"
+           android:layout_marginTop="18dp"
+           android:layout_marginEnd="25dp"
+           android:hint="Password"
+           app:layout_constraintTop_toBottomOf="@id/f_registration_til_email_address"
+           app:passwordToggleEnabled="true"
+           app:passwordToggleTint="@color/colorPlaceholderLightGrey">
+
+           <com.google.android.material.textfield.TextInputEditText
+               android:id="@+id/f_registration_tiet_password"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:inputType="textPassword"
+               android:maxLines="1"
+               android:textColor="@color/colorPlaceholderLightGrey" />
+       </com.google.android.material.textfield.TextInputLayout>
+
+       <com.google.android.material.switchmaterial.SwitchMaterial
+           android:id="@+id/f_registration_sw_agree_to_terms"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="18dp"
+           android:checked="true"
+           app:layout_constraintStart_toStartOf="@id/f_registration_til_password"
+           app:layout_constraintTop_toBottomOf="@id/f_registration_til_password" />
+       <!-- Agree to terms and conditions switch -->
+       <TextView
+           android:id="@+id/f_registration_tv_agree_to_terms"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:text="@string/switch_agree_to_terms"
+           android:textColor="@color/colorPlaceholderLightGrey"
+           android:textSize="18dp"
+           app:layout_constraintBottom_toBottomOf="@id/f_registration_sw_agree_to_terms"
+           app:layout_constraintStart_toEndOf="@id/f_registration_sw_agree_to_terms"
+           app:layout_constraintTop_toTopOf="@id/f_registration_sw_agree_to_terms" />
+       <!--  Sign Up Button  -->
+       <Button
+           android:id="@+id/f_registration_btn_sign_up"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="18dp"
+           android:background="@drawable/blue_gradient_rounded_corners"
+
+           android:fontFamily="@font/segoeui_bold_font"
+           android:paddingStart="50dp"
+           android:paddingEnd="50dp"
+           android:text="Sign Up"
+           android:textAllCaps="false"
+           android:textColor="#fff"
+           android:textSize="20sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/f_registration_sw_agree_to_terms" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

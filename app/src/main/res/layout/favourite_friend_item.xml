@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/itemContainer"
+    android:background="#fff">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemContainer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="0.5:0.55"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/me"
+                app:shapeAppearanceOverlay="@style/Circularn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@drawable/favourite_item_background"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mohamed Soliman"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/Bio_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:gravity="center"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Softwaree Engineer"
+                    android:layout_gravity="center"
+                    android:textColor="#fff"
+                    android:textSize="12sp"/>
+                <!--                <androidx.appcompat.widget.AppCompatRatingBar-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:rating="4"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:scaleX="0.5"-->
+                <!--                    android:scaleY="0.5"-->
+                <!--                    android:numStars="5"-->
+                <!--                    android:progressBackgroundTint="#fff"/>-->
+            </LinearLayout>
+            <!--        <ImageView-->
+            <!--            android:id="@+id/delete_btn"-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            app:tint="@color/orange"-->
+            <!--            android:src="@drawable/ic_baseline_delete_forever_24"-->
+            <!--            app:layout_constraintHorizontal_bias="0"-->
+            <!--            app:layout_constraintVertical_bias="1"-->
+            <!--            android:layout_margin="10dp"-->
+            <!--            app:layout_constraintStart_toStartOf="parent"-->
+            <!--            app:layout_constraintEnd_toEndOf="parent"-->
+            <!--            app:layout_constraintTop_toTopOf="parent"-->
+            <!--            android:alpha="0.8"-->
+            <!--            android:elevation="50dp"-->
+            <!--            app:elevation="50dp"-->
+            <!--            />-->
+
+            <ImageView
+                android:id="@+id/share_Btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="#fff"
+                android:src="@drawable/ic_baseline_share_white_24"
+                app:layout_constraintHorizontal_bias="0.99"
+                app:layout_constraintVertical_bias="1"
+                android:layout_margin="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                />
+            <ImageView
+                android:id="@+id/favourite_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_favorite_24"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintVertical_bias="0"
+                android:layout_margin="10dp"
+                app:tint="@color/red"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/Favourite_item_openProfile_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:layout_marginStart="12dp"
+        android:enabled="true"
+        android:fontFamily="@font/segoeui_font"
+        android:text="Next "
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:icon="@drawable/ic_nextarrow"
+        app:iconSize="25dp"
+        app:iconGravity="end"
+        app:iconPadding="40dp"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:iconTint="@color/white"
+        app:cornerRadius="25dp"
+        android:elevation="10dp"
+            android:theme="@style/Theme.BeClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/itemContainer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/itemContainer2"/>
+<!--    <ImageButton-->
+<!--        android:id="@+id/goto_Btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingStart="9dp"-->
+<!--        android:paddingEnd="9dp"-->
+<!--        android:paddingTop="9dp"-->
+<!--        android:paddingBottom="9dp"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        android:background="@drawable/circyle_shape"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/itemContainer2"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/itemContainer2"-->
+<!--        android:elevation="4dp"-->
+<!--        />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

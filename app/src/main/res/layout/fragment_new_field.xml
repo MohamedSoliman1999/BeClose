@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Distenation.NewFieldFragment">
+
+    <!-- User Type Selector -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/f_auth_til_user_type"
+        style="@style/customOutlinedExposedDropDown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Field Name"
+        app:endIconDrawable="@drawable/ic_spinner_down_arrow"
+        app:endIconTint="@color/colorDropDownArrow"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/f_field_name_ACTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:inputType="none"
+            android:textColor="@color/colorPlaceholderLightGrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Email Input Field-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/f_registration_til_email_address"
+        style="@style/customOutLinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="25dp"
+        android:hint="Field Content"
+        app:layout_constraintTop_toBottomOf="@id/f_auth_til_user_type">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/f_field_content_tiet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+
+            android:textColor="@color/colorPlaceholderLightGrey" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--  Sign Up Button  -->
+    <Button
+        android:id="@+id/f_new_field_btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/blue_gradient_rounded_corners"
+
+        android:fontFamily="@font/segoeui_bold_font"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="Add"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/f_registration_til_email_address" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "739004383106",
+    "project_id": "be-close-a5975",
+    "storage_bucket": "be-close-a5975.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739004383106:android:8d35847b64debda291199b",
+        "android_client_info": {
+          "package_name": "com.example.beclose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739004383106-k0rqiila8nccrglus753ilgd7b02qfm6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.beclose",
+            "certificate_hash": "a4ed768385abcf8d715f089821a795fcf04b801d"
+          }
+        },
+        {
+          "client_id": "739004383106-u17t11o1lsbtovpol2do8ulm5550r1t1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVOfIceWX6mqrAj28FA_tMJGUNTPhLjIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739004383106-u17t11o1lsbtovpol2do8ulm5550r1t1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

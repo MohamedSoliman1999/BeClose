@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Be Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to_sign_up">Don\'t have an account? <![CDATA[<font color=#46B8F0>Sign up</font>]]></string>
+    <string name="switch_agree_to_terms">I agree to the policy &amp; terms</string>
+    <string name="profile">Profile</string>
+    <string name="business_dashboard">Business Dashboard</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="about_us">About us</string>
+    <string name="about_travisit_business">About Travisit Business</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="share_app">Tell others about Travisit Business</string>
+    <string name="rate_app">Rate us on Play Store</string>
+</resources>

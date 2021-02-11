@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Forms.SignInFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Email Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/f_auth_til_email_address"
+        style="@style/customOutLinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:hint="Email Address"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/f_auth_tiet_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:nextFocusForward="@id/f_auth_til_password"
+            android:textColor="@color/colorPlaceholderLightGrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- Password Input Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/f_auth_til_password"
+        style="@style/customOutLinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:hint="Password"
+        app:layout_constraintTop_toBottomOf="@id/f_auth_til_email_address"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorPlaceholderLightGrey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/f_auth_tiet_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textColor="@color/colorPlaceholderLightGrey" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--  Forgot Password TextView -->
+    <TextView
+        android:id="@+id/f_auth_tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="4dp"
+        android:text="Forgot password?"
+        android:textColor="@color/colorPlaceholderLightGrey"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/f_auth_til_password"
+        app:layout_constraintTop_toBottomOf="@id/f_auth_til_password" />
+    <!--  Sign In Button  -->
+
+    <Button
+        android:id="@+id/f_auth_btn_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_gradient_rounded_corners"
+
+        android:fontFamily="@font/segoeui_bold_font"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/f_auth_tv_forgot_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
