@@ -1,6 +1,22 @@
 # BeClose
 This app allows you to create a profile and publish your all data on it and allow your friends to access your information("resume Link", image, Facebook link, GitHub link, etc) by scanning your QR-Code which is auto-generated.
 
+Techbology:
+-android: kotline native
+-signle activity app using navigation component
+-real time database using firebase
+-firebae authintication
+- QR scanner with python script using Open CV
+-QR Code Generator 
+-kotlin coroutines and retrofit
+-clean archticture using MVVM and Life data
+-Data Binding
+-chashing data using Room database and pagination technique
+-Push notification using FCM
+- dependancy injection using dagger hilt
+-Repositry Pattern
+-Fresco Library
+
 
 ![image](https://user-images.githubusercontent.com/49350237/107760147-fa97a780-6d31-11eb-8de8-db6a39e6f170.png)
 
