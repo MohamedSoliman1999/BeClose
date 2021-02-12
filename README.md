@@ -6,10 +6,10 @@ Techbology:
 -signle activity app using navigation component
 -real time database using firebase
 -firebae authintication
-- QR scanner with python script using Open CV
--QR Code Generator 
--kotlin coroutines and retrofit
--clean archticture using MVVM and Life data
+QR scanner with python script using Open CV
+QR Code Generator 
+kotlin coroutines and retrofit
+clean archticture using MVVM and Life data
 -Data Binding
 -chashing data using Room database and pagination technique
 -Push notification using FCM
