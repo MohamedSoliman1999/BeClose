@@ -16,7 +16,7 @@ Techbology:
 - dependancy injection using dagger hilt
 - Repositry Pattern
 - Fresco Library
-
+- workManager
 
 ![image](https://user-images.githubusercontent.com/49350237/107760147-fa97a780-6d31-11eb-8de8-db6a39e6f170.png)
 
